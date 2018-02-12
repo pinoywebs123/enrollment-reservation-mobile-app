@@ -1,0 +1,14 @@
+{
+  "name": "project",
+  "app_id": "c7a3d80d",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://localhost/norsu/public/api/"
+    }
+  ]
+}

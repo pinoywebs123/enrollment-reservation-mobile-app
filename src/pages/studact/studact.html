@@ -1,0 +1,31 @@
+<!--
+  Generated template for the StudactPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Student Activity</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+<ion-card *ngFor="let sub of data">
+
+  <ion-card-header>
+     {{sub.subject.subject_code}}
+    
+  </ion-card-header>
+
+  <ion-card-content>
+   <p>{{sub.subject.subject_description}} </p>
+   <mark>{{sub.subject.semester}}</mark>
+  </ion-card-content>
+
+</ion-card>
+</ion-content>

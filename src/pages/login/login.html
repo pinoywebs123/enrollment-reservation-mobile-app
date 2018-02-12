@@ -1,0 +1,29 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title text-center>NORSU BCC Login Page</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <p text-center><img src="image/icon.png" width="120px"></p>
+  <ion-list>
+    
+      <ion-item>
+        <ion-label floating>I.D Number</ion-label>
+        <ion-input type="text" [(ngModel)]="id"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+    
+      <button ion-button color="primary" block (click)="clickLogin()">Sign In</button>
+    </ion-list>
+
+</ion-content>

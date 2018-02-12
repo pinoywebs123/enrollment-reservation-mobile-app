@@ -1,0 +1,109 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>NORSU STAFF Dashboard</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div >
+    <ion-segment [(ngModel)]="subject">
+      <ion-segment-button value="n1">
+        1st
+      </ion-segment-button>
+      <ion-segment-button value="n2">
+        2nd
+      </ion-segment-button>
+      <ion-segment-button value="n3">
+        3rd
+      </ion-segment-button>
+      <ion-segment-button value="n4">
+        4th
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
+  <div [ngSwitch]="subject">
+   <div *ngIf="data">
+    <ion-list *ngSwitchCase="'n1'">
+      
+        <ion-item *ngFor="let sub of data.first">
+            <ion-thumbnail item-start>
+              <img src="image/student.png">
+            </ion-thumbnail>
+            <h2>{{sub.subject_code}}</h2>
+            
+            <button ion-button color="danger" round  item-end (click)="clickStudentList(sub.id)">{{sub.number}}</button>
+          </ion-item>
+
+    </ion-list>
+   
+  
+   
+      <ion-list *ngSwitchCase="'n2'">
+
+        <ion-item *ngFor="let sub of data.second">
+            <ion-thumbnail item-start>
+              <img src="image/student.png">
+            </ion-thumbnail>
+            <h2>{{sub.subject_code}}</h2>
+            
+            <button ion-button color="danger" round item-end (click)="clickStudentList(sub.id)">{{sub.number}}</button>
+          </ion-item>
+
+      </ion-list>
+   
+
+    <ion-list *ngSwitchCase="'n3'">
+      
+        <ion-item *ngFor="let sub of data.third">
+            <ion-thumbnail item-start>
+              <img src="image/student.png">
+            </ion-thumbnail>
+            <h2>{{sub.subject_code}}</h2>
+            
+            <button ion-button color="danger" round item-end (click)="clickStudentList(sub.id)">{{sub.number}}</button>
+          </ion-item>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'n4'">
+     
+        <ion-item *ngFor="let sub of data.fourth">
+            <ion-thumbnail item-start>
+              <img src="image/student.png">
+            </ion-thumbnail>
+            <h2>{{sub.subject_code}}</h2>
+            
+            <button ion-button color="danger" round item-end (click)="clickStudentList(sub.id)">{{sub.number}}</button>
+        </ion-item>
+
+    </ion-list>
+
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    
+
+    <ion-buttons end >
+      <button ion-button icon-right color="royal" (click)="clickSet()">
+        Settings
+        <ion-icon name="md-settings"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end >
+      <button ion-button icon-right color="royal" (click)="clickLogout()">
+        Logout
+        <ion-icon name="ios-power-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-footer>

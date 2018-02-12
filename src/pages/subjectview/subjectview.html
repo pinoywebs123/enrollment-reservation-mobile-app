@@ -1,0 +1,43 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Subject Information Page</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="data">
+      <p text-center> <img src="image/student.png" ></p>
+     
+      <ion-card>
+          
+          <ion-card-content text-center>
+              <h4 text-center>Pre-Requisite</h4>
+            <ion-card-title>
+                
+               {{data.subject.requisite.subject_code}}
+              </ion-card-title>
+           
+          </ion-card-content>
+        </ion-card>
+
+    <ion-card>
+      
+      <ion-card-content text-center>
+          <h4 text-center>Subject</h4>
+        <ion-card-title>
+           
+         {{data.subject.subject_code}}
+          </ion-card-title>
+        <p>
+          {{data.subject.subject_description}}
+        </p>
+        
+      </ion-card-content>
+    </ion-card>
+    <button ion-button block color="danger" (click)="clickReserve(data.subject.id)">RESERVE NOW</button>
+  </div>
+</ion-content>
