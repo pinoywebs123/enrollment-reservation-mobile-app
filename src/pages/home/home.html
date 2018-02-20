@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
-     <p text-center> NORSU BCC Reservation</p>
+        NORSU BCC Inquiry & Reservation
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -10,20 +10,18 @@
   <div >
     <ion-segment [(ngModel)]="subject">
       <ion-segment-button value="n1">
-        CAS
+        1st
       </ion-segment-button>
       <ion-segment-button value="n2">
-        CCJE
+        2nd
       </ion-segment-button>
       <ion-segment-button value="n3">
-        CBA
+        3rd
       </ion-segment-button>
       <ion-segment-button value="n4">
-        CED
+        4th
       </ion-segment-button>
-      <ion-segment-button value="n5">
-        CIT
-      </ion-segment-button>
+      
     </ion-segment>
   </div>
   
@@ -84,18 +82,7 @@
 
     </ion-list>
 
-    <ion-list *ngSwitchCase="'n5'">
-     
-      <ion-item *ngFor="let sub of data.fifths">
-          <ion-thumbnail item-start>
-            <img src="image/student.png">
-          </ion-thumbnail>
-          <h2>{{sub.subject_code}}</h2>
-          <p>{{sub.subject_description}}</p>
-          <button ion-button clear item-end (click)="clickSubject(sub.id)">View</button>
-      </ion-item>
-
-  </ion-list>
+    
 
     </div>
   </div>
@@ -103,6 +90,13 @@
 
 <ion-footer>
   <ion-toolbar color="primary">
+      <ion-buttons start>
+          <button ion-button icon-only color="royal" (click)="clickInquiry()">
+            Inquiry
+            <ion-icon name="md-calendar"></ion-icon>
+          </button>
+        </ion-buttons>
+
     <ion-buttons start>
       <button ion-button icon-only color="royal" (click)="clickAct()">
         Activity

@@ -19,6 +19,9 @@ import { AdminlistPage } from '../pages/adminlist/adminlist';
 
 import { StudactPage } from '../pages/studact/studact';
 import { StudsetPage } from '../pages/studset/studset';
+import { InquiryPage } from '../pages/inquiry/inquiry';
+import { CreateinquiryPage } from '../pages/createinquiry/createinquiry';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -30,7 +33,9 @@ import { StudsetPage } from '../pages/studset/studset';
     // AdminsetPage,
     // StudactPage,
     // StudsetPage,
-    // AdminlistPage
+    // AdminlistPage,
+    // InquiryPage,
+    // CreateinquiryPage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,9 @@ import { StudsetPage } from '../pages/studset/studset';
     AdminsetPage,
     StudactPage,
     StudsetPage,
-    AdminlistPage
+    AdminlistPage,
+    InquiryPage,
+    CreateinquiryPage
   ],
   providers: [
     StatusBar,

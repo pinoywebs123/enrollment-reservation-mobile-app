@@ -1,0 +1,29 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+      <ion-buttons start>
+          <button ion-button icon-only color="royal" (click)="clickCreateInquiry()">
+           
+            <ion-icon name="md-add-circle"></ion-icon>
+          </button>
+        </ion-buttons>
+
+    <ion-title>My Inquiry List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-slides pager>
+
+        <ion-slide  *ngFor="let aw of data">
+          <h2>{{aw.inquiry_title}}</h2>
+          <p>{{aw.inquiry_content}}</p>
+        </ion-slide>
+      
+        
+      
+      </ion-slides>
+</ion-content>

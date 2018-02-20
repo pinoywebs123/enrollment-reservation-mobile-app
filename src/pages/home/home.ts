@@ -6,6 +6,7 @@ import { LoginPage } from '../login/login';
 import{ SubjectviewPage } from '../subjectview/subjectview';
 import { StudactPage } from '../studact/studact';
 import { StudsetPage } from '../studset/studset';
+import { InquiryPage } from '../inquiry/inquiry';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -41,6 +42,10 @@ export class HomePage {
 
   clickSet(){
     this.navCtrl.push(StudsetPage);
+  }
+
+  clickInquiry(){
+    this.navCtrl.push(InquiryPage);
   }
     
 
